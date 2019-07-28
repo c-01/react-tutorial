@@ -26,7 +26,10 @@
   padding-left: 10px;
   color:white;
 }
-
+.Nav-main a{
+  text-decoration: none;
+  color: lightsalmon;
+}
 .Nav-main ul li:hover{
   cursor: pointer;
 }

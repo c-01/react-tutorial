@@ -2,16 +2,32 @@ import React from "react";
 import About from "./components/About";
 import Shop from "./components/Shop";
 import Service from "./components/Service";
-import Nav from './components/Nav';
+import Nav from "./components/Nav";
 import "./App.css";
+
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
+    <Router>
+      <div>
+        <Nav />
+
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/shop" component={Shop} />
+          <Route path="/service" component={Service} />
+        </Switch>
+      </div>
+    </Router>
+  );
+}
+
+function Home() {
+  return (
     <div>
-      <Nav />
-      <About />
-      <Shop />
-      <Service />
+      <h1>This Home page</h1>
     </div>
   );
 }
