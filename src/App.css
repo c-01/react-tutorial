@@ -33,3 +33,7 @@
 .Nav-main ul li:hover{
   cursor: pointer;
 }
+
+.red {
+  color:red;
+}
